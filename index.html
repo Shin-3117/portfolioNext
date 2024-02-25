@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4578d36163.js" crossorigin="anonymous"></script>
+    <title>포트폴리오</title>
+    <style>
+        .AboutMe{
+          padding: 4%;
+          animation: fadein 3s;
+        }
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .AboutMeTitle {
+            font-size: larger;
+            width: 200px;
+            margin: 4px 0 0 8px;
+            padding: 4px;
+            padding-left: 20px;
+            border-radius: 8px 8px 0 0;
+        }
+        .AboutMeFirst{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .AboutMeFirstText{
+            background-color: black;
+            padding: 4px;
+            border-radius: 16px;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+        .iconContainer{
+            border-bottom: 1px ghostwhite solid;
+        }
+        .iconImage{
+            padding: 4px;
+            height: 24px;
+        }
+        .AboutMeInfoWrapper{
+            color: white;
+        }
+        .skills{
+            padding: 4%;
+        }
+        .skillContainer{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            /* justify-content: center; */
+
+            min-height: 80px;
+        }
+        .xlIconContainer{
+            border-radius: 24px;
+            padding: 12px;
+
+        }
+        .iconImageXl{
+            min-width: 88px;
+            text-align: center;
+            margin-right: 8px;
+            max-height: 80px;
+            max-width: 100px;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-bottom: 50px solid transparent;
+            border-top: 50px solid transparent;
+            border-left: 50px solid transparent;
+            border-right: 50px solid skyblue;
+        }
+        .skillInfo{
+            background-color: #212121;
+            border-radius: 24px;
+            padding: 12px;
+            position: relative;
+        }
+        .skillInfo:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 12px solid transparent;
+            border-right-color: #212121;
+            border-left: 0;
+            margin-top: -12px;
+            margin-left: -12px;
+        }
+        a {
+        text-decoration: none;
+        }
+        #Rotate{
+            transition: all ease 1s;
+        }
+        #Rotate:active{
+            transform: rotate(2turn)
+        }
+        #projects{
+            padding: 4%;
+        }
+        .img1{
+          height: 32px;
+          margin-bottom: 4px;
+        }
+    </style>
+    
+</head>
+<body class="bg-black text-white">
+  <header class="sticky-top">
+      <nav id="headerNavbar" class="navbar navbar-expand-sm  bg-dark" data-bs-theme="dark">
+          <div class="container-fluid">
+              <h1 class="navbar-brand">포트폴리오</h1>
+              <button class="navbar-toggler" type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" 
+                        href="#">
+                        자기소개
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" 
+                          href="#skills">
+                          기술 스택
+                          </a> 
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" 
+                          href="#projects">
+                          프로젝트
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" 
+                          href="https://github.com/Shin-3117"
+                          target="_blank">
+                          깃허브
+                          </a>
+                      </li>
+                    </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+  
+  <main class="" data-bs-spy="scroll" data-bs-target="#headerNavbar">
+    <section id="AboutMe" class="AboutMe">
+        <h2 class="AboutMeTitle bg-dark "> 자기소개</h2>
+        <div class="AboutMeFirst bg-dark text-white p-2">
+          <a href="#projects">
+            <i class="iconImage fa-solid fa-arrow-left fa-lg text-white"></i>
+          </a>
+          <a href="#skills">
+            <i class="iconImage fa-solid fa-arrow-right fa-lg text-white"></i>
+          </a>
+          <div id="Rotate">
+            <i  class="iconImage px-2 fa-solid fa-rotate-left fa-flip-horizontal fa-lg"></i>
+          </div>
+          <div class="AboutMeFirstText"> 
+            Front-End Web Developer / Shin hyeonjung 
+          </div>
+        </div>
+        <div class="iconContainer bg-dark text-white p-2">
+          <a href="#skills">
+            <i class="iconImage fa-brands fa-html5 fa-lg" style="color: #e34f26;"></i>
+            <i class="iconImage fa-brands fa-css3-alt fa-lg" style="color :#1680C0"></i>
+            <i class="iconImage fa-brands fa-sass fa-lg" style="color: #CD6799;"></i>
+            <i class="iconImage fa-brands fa-bootstrap fa-lg" style="color: #563d7c;"></i>
+            <img class="iconImage" src="./img/tailwindcss-mark.svg" alt="tailwindcss-mark" >
+            <i class="iconImage fa-brands fa-js fa-lg" style="color: #F0DB4F;"></i>
+            <img class="iconImage img1" src="./img/typescript-mark.svg" alt="typescript-mark" >
+            <i class="iconImage fa-brands fa-react fa-lg" style="color: #61dbfb;"></i>
+            <i class="iconImage fa-brands fa-vuejs fa-lg" style="color: #41B883;"></i>
+            <i class="iconImage fa-brands fa-python fa-lg" style="color: #4584b6;"></i>
+            <i class="iconImage fa-brands fa-git-alt fa-lg" style="color: #f34f29;"></i>
+          </a>
+          <a href="https://github.com/Shin-3117" target="_blank" class="iconSeccion">
+              <i class="iconImage fa-brands fa-github fa-lg  text-light"></i>
+          </a>
+        </div>
+            <div class="AboutMeInfoWrapper container-fluid bg-dark pt-5">
+            <!-- <h3 class=" text-center">프론트엔드 개발자 신현중</h3> -->
+            <div class="row">
+                <h3 class="col-12 text-center">Development for Human</h3>
+                <h3 class="col-12 text-center pb-5">신현중의 포트폴리오 입니다.</h3>
+                
+                <div class="col-12 col-sm-6">
+                    <h4>Info</h4>
+                    <p>생년월일 : 1997.03.28</p>
+                    <p>학력 : 부산대학교</p>
+                    <p>경력 : 매그나칩반도체 (7개월 : 22.06~22.12)</p>
+                    <p class="m-0">교육이수 :
+                    <ul>
+                        <li>코드스테이츠 경상남도 ABC-Lab (4개월 : 23.01~23.04)</li>
+                        <li>SSAFY (진행중 : 23.07~)</li>
+                    </ul>
+                    </p>
+                    
+                </div>
+                <div class="col-12 col-sm-6 contact">
+                    <h4>Contact</h4>
+                    <p>연락처 : 010-8662-3117</p>
+                    <p>이메일 : tlswnd3127@gmail.com</p>
+                    <a class="nav-link mb-2" 
+                    href="https://github.com/Shin-3117"
+                    target="_blank">깃허브 : https://github.com/Shin-3117</a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="skills" class="skills">
+      <h2 class="text-center">기술 스택</h2>
+      <div class="xlIconContainer fs-1 text-white bg-dark">
+        <div class="d-flex flex-row flex-wrap justify-content-center">
+          <div class="skillContainer">
+            <i class="iconImageXl fa-brands fa-js fa-2xl" style="color: #F0DB4F;"></i>
+          </div>
+          <div class="skillContainer">
+            <img class="iconImageXl" src="./img/typescript-mark.svg" alt="typescript-mark" >
+          </div>
+          <div class="skillContainer">
+            <i class="iconImageXl fa-brands fa-react fa-2xl" style="color: #61dbfb;"></i>
+          </div>
+          <div class="skillContainer">
+              <i class="iconImageXl fa-brands fa-vuejs fa-2xl" style="color: #41B883;"></i>
+          </div>
+          <div id="skillHTML" class="skillContainer">
+              <i class="iconImageXl fa-brands fa-html5 fa-2xl" style="color: #e34f26;"></i>
+          </div>
+          <div class="skillContainer">
+            <i class="iconImageXl fa-brands fa-css3-alt fa-2xl" style="color :#1680C0"></i>
+          </div>
+          <div class="skillContainer">
+            <i class="  iconImageXl fa-brands fa-sass fa-2xl" style="color: #CD6799;"></i>
+          </div>
+          <div id="JS" class="skillContainer">
+            <i class="  iconImageXl fa-brands fa-bootstrap fa-2xl" style="color: #563d7c;"></i>
+          </div>
+          <div id="JS" class="skillContainer">
+              <img src="./img/tailwindcss-mark.svg" alt="tailwindcss-mark" class="iconImageXl">
+          </div>
+          <div class="skillContainer">
+              <i class="  iconImageXl fa-brands fa-python fa-2xl" style="color : #4584b6"></i>
+          </div>
+          <div class="skillContainer">
+              <img src="./img/django_icon.png" alt="장고아이콘" class="iconImageXl" style="width: 80px; height: 80px;">
+          </div>
+          <div class="skillContainer">
+            <i class="  iconImageXl fa-brands fa-git-alt fa-2xl" style="color: #f34f29;"></i>
+          </div>
+        </div>
+    </div>
+
+    </section>
+
+    <section id="projects" class="container-fluid text-center">
+      <h2 class="text-center">프로젝트</h2>
+    <div class="text-white row g-4">
+      <article class=" col-12 col-md-6">
+        <div class="card bg-dark text-white p-2">
+          <img src="./img/JS_Shooting_game.gif" class="card-img-top" alt="슈팅게임이미지">
+          <div class="card-body">
+            <h5 class="card-title">JS_Shooting_game</h5>
+            <p class="card-text">HTML canvas 태그와 
+              자바스크립트의 animate() 기능을 사용하여 만들었습니다.
+            </p>
+            <div>
+              <a href="https://shin-3117.github.io/JS_Shooting_game/" class="btn btn-primary m-1"
+              target="_blank" rel="noreferrer noopener">플레이 하기</a>
+              <a href="https://github.com/Shin-3117/JS_Shooting_game" class="btn btn-secondary"
+              target="_blank" rel="noreferrer noopener">프로젝트 깃허브로 이동</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class=" col-12 col-md-6">
+        <div class="card bg-dark text-white p-2">
+            <img src="./img/project_movie_selector.png" class="card-img-top" alt="프로젝트 : 영화 리뷰 사이트 이미지">
+            <div class="card-body">
+              <h5 class="card-title">무비 셀렉트</h5>
+              <p class="card-text">4인 팀 프로젝트로 <br> React, Sass를 사용하여 제작했습니다.
+
+              </p>
+              <a href="https://github.com/Shin-3117/select_movie" target="_blank" class="btn btn-secondary">프로젝트 깃허브로 이동</a>
+            </div>
+        </div>
+      </article>
+      <article class=" col-12 col-md-6">
+        <div class="card bg-dark text-white p-2">
+          <img src="./img/TRM.png" class="card-img-top" alt="프로젝트 : 영화 리뷰 사이트 이미지">
+          <div class="card-body">
+            <h5 class="card-title">React-Typescript_Movie</h5>
+            <p class="card-text">React, Typescrip로 만든 영화 사이트 입니다.
+            </p>
+            <a href="https://github.com/Shin-3117/React-Typescript_Movie" 
+            target="_blank" rel="noreferrer noopener"
+            class="btn btn-secondary">프로젝트 깃허브로 이동</a>
+          </div>
+        </div>
+      </article>
+      <article class=" col-12 col-md-6">
+          <div class="card bg-dark text-white p-2">
+            <img src="./img/SSI.png" class="card-img-top" alt="프로젝트 : 투자 정보 사이트 이미지">
+            <div class="card-body">
+              <h5 class="card-title">Simple Support INVEST</h5>
+              <p class="card-text">2인 팀 프로젝트로 <br>투자를 위한 종합 정보 제공 사이트입니다. 
+                <br>Django, Vue, Typescrip, tailwindcss를 사용했습니다
+              </p>
+              <a href="https://github.com/Shin-3117/SSAFY_Team_Project" target="_blank" class="btn btn-secondary">프로젝트 깃허브로 이동</a>
+            </div>
+          </div>
+      </article>
+      <article class=" col-12 col-md-6">
+        <div class="card bg-dark text-white p-2">
+          <img src="./img/StartPage.gif" class="card-img-top" alt="프로젝트 : 온라인 예능 게임 플래폼">
+          <div class="card-body">
+            <h5 class="card-title">UH!?</h5>
+            <p class="card-text">6인 팀 프로젝트로 <br>"UH!?"는 WebRTC를 이용한 온라인 예능 게임 플래폼입니다.
+              <br>React, Typescrip, tailwindcss, zustand,<br> springboot, Flask를 사용했습니다
+            </p>
+            <a href="https://github.com/Shin-3117/SSAFY_Team_Project" target="_blank" class="btn btn-secondary">프로젝트 깃허브로 이동</a>
+          </div>
+        </div>
+    </article>
+    </div>
+    </section>
+  </main>
+  <footer class="container-fluid bg-dark p-2">
+    <div class="row text-white ">
+      <a class="col-1 text-center nav-link" 
+      href="https://github.com/Shin-3117"
+      target="_blank" rel="noreferrer noopener">
+          <i class="iconImage m-2 fa-brands fa-github fa-xl"></i>
+      </a>
+      <p class="col-10 col-md-3 ">Name : Shin hyeonjung</p>
+      <p class="col-12 col-sm-6 col-md-4 ">Phone number : 010-8662-3117</p>
+      <p class="col-12 col-sm-6 col-md-4">E-mail : tlswnd3127@gmail.com</p>
+        
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+  crossorigin="anonymous">
+
+  </script>
+</body>
+</html>
