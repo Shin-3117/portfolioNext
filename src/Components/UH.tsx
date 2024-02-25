@@ -123,8 +123,8 @@ export default function UH() {
               </p>
               <p>
                 -- <code>useRef()</code>와 <code>useEffect()</code>를 통해
-                setInterval() 기능을 하는 커스텀 훅(useInterval)을 만들어
-                반복실행합니다.
+                <code>setInterval()</code> 기능을 하는 커스텀 훅
+                <code>useInterval()</code>을 만들어 반복실행합니다.
               </p>
               <p>
                 -- 제한 시간을 넘기면, 라운드를 증가하고, 팀 변경 및 문제를
@@ -175,15 +175,47 @@ export default function UH() {
           <ul className="mb-2">
             <li className="pb-1">
               <h5>OpenVidu의 예제코드와 사용 react버전이 다름</h5>
+              <p>
+                - 예제코드가 react 16버전, Class Component으로 적혀있었습니다.
+              </p>
+              <p>
+                - react 18버전을 사용 중이였고 Function Component를 사용할
+                예정이였습니다.
+              </p>
+              <p>
+                - Class Component로 작성하다가 예제코드를 Function Component으로
+                변경된 코드를 찾아 적용했습니다.
+              </p>
             </li>
             <li className="pb-1">
               <h5>연결된 각 브라우저별로 문제 화면이 달라지는 버그</h5>
-            </li>
-            <li className="pb-1">
-              <h5>연결된 각 브라우저별로 정답처리가 달라지는 버그</h5>
+              <p>
+                - 각 유저의 브라우저에서 정답처리가 달라져 발생하는
+                문제였습니다.
+              </p>
+              <p>
+                - 채팅시 socket에 문제 정보와 정답 정보를 추가하여 통신을 하여
+                해결했습니다.
+              </p>
             </li>
             <li className="pb-1">
               <h5>연결된 각 브라우저별로 게임 시간이 달라지는 버그</h5>
+              <p>
+                <code>setInterval()</code>로 구현을 했을 때 발생한 문제였습니다.
+              </p>
+              <p>1. 리렌더링이 일어나면, 시간이 초기화 되거나</p>
+              <p>
+                2. delay 시간이 보장이 되지 않아 유저별 시간 차이가
+                발생했습니다.
+              </p>
+              <p>
+                이를 반장의 시간을 socket으로 통신하여 해결하려 했지만 무한
+                루프로 오류가 발생했습니다.
+              </p>
+              <p>
+                이를 해결하기 위해, <code>useInterval()</code> 이라는 커스텀
+                훅을 발견하고 사용했습니다.
+              </p>
             </li>
           </ul>
         </section>
