@@ -1,5 +1,8 @@
 import Information from "@/Components/Information";
 import JsShootingGame from "@/Components/JsShootingGame";
+import MovieSelector from "@/Components/MovieSelector";
+import ReactTypescriptMovie from "@/Components/ReactTypescriptMovie";
+import SSI from "@/Components/SimpleSupportInvest";
 import Skills from "@/Components/Skills";
 import UH from "@/Components/UH";
 export default function Home() {
@@ -18,8 +21,11 @@ export default function Home() {
       </section>
       <section id="Projects" className="center flex-col">
         <h2 className="text-3xl font-semibold p-2">Projects</h2>
-        <JsShootingGame />
         <UH />
+        <JsShootingGame />
+        <SSI />
+        <ReactTypescriptMovie />
+        <MovieSelector />
       </section>
     </main>
   );

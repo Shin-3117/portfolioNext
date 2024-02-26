@@ -18,6 +18,10 @@ code {
   @apply bg-slate-300 rounded-md p-1 text-base;
 }
 
+pre {
+  @apply bg-slate-300 rounded-md p-3 text-base;
+}
+
 h4 {
   @apply text-xl;
 }

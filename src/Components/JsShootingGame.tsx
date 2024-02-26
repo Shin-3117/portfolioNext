@@ -1,11 +1,14 @@
 import Image from "next/image";
-import projectImg from "../img/projects/JS_Shooting_game.gif";
+import projectImg from "../img/projects/JS_Shooting_game/start_end.gif";
+import projectImg2 from "../img/projects/JS_Shooting_game/SuperShoot.gif";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import TroubleshootIcon from "@mui/icons-material/Troubleshoot";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import HTML from "../img/skills/HTML.svg";
+import JavaScript from "../img/skills/JavaScript.svg";
 export default function JsShootingGame() {
   return (
-    <article className="p-4 m-4 bg-stone-100 rounded-2xl lg:flex w-[90vw]">
+    <article className="p-4 m-4 bg-stone-50 rounded-2xl w-[90vw] max-w-[1200px]">
       <section>
         <div className="flex justify-between mb-4">
           <a
@@ -29,11 +32,26 @@ export default function JsShootingGame() {
           </a>
         </div>
         <div className="center flex-col">
-          <Image src={projectImg} alt="슈팅게임이미지" />
+          <div className="flex">
+            <div className="w-1/2 max-w-[560px]">
+              <Image src={projectImg} alt="슈팅게임이미지" />
+            </div>
+            <div className="w-1/2 max-w-[560px]">
+              <Image src={projectImg2} alt="슈팅게임이미지" />
+            </div>
+          </div>
           <p>
             HTML canvas 태그와 자바스크립트의 animate() 기능을 사용하여
             만들었습니다.
           </p>
+          <ul className="flex gap-2 p-2">
+            <li>
+              <Image src={HTML} width={50} height={50} alt="HTML" />
+            </li>
+            <li>
+              <Image src={JavaScript} width={50} height={50} alt="JavaScript" />
+            </li>
+          </ul>
         </div>
       </section>
       <section className="p-4">
@@ -46,8 +64,8 @@ export default function JsShootingGame() {
             <li className="pb-1">
               <h5>HTML canvas tag 와 JS animate() 활용하여 게임 구동</h5>
               <p>
-                - animate() 함수를 통해 적생성, 총알생성, 충돌판정, 파편생성
-                등을 처리했습니다.
+                - animate() 함수를 통해 적생성, 총알생성, 충돌판정, 파편생성,
+                슈퍼샷 등을 처리했습니다.
               </p>
               <p>
                 -- 적생성의 위치는 화면 밖에서, 점수에 비례해 생성 속도가
@@ -66,11 +84,16 @@ export default function JsShootingGame() {
                 -- 파편생성은 적의 크기에 비례해 파편이 생성되고 랜덤한 방향으로
                 튀도록 만들었습니다.
               </p>
+              <p>
+                -- 슈퍼 샷의 경우, 충돌시 파편이 아닌 슈퍼 샷을 추가로
+                생성합니다.
+              </p>
             </li>
             <li className="pb-1">
               <h5>자바스크립트의 class 구문에 대한 활용</h5>
               <p>
-                - 적, 총알, 파편 등을 class로 정의하고 인스턴스를 생성했습니다.
+                - 적, 총알, 파편, 슈퍼샷 등을 class로 정의하고 인스턴스를
+                생성했습니다.
               </p>
             </li>
           </ul>
@@ -100,6 +123,17 @@ export default function JsShootingGame() {
                 - 이를 해결하기 위해 <code>let frame = 0</code>를 선언하고{" "}
                 <code>animate()</code>함수가 실행될 때마다 frame을 1식 증가하고
                 frame이 60이 되었을 때, 적생성 함수를 호출하도록 변경하였습니다.
+              </p>
+            </li>
+            <li className="pb-1">
+              <h5>슈퍼샷으로 인한 브라우저 멈춤</h5>
+              <p>
+                - 슈퍼샷 성능이 좋아, 게임이 계속해서 지속되 슈퍼샷과 적
+                인스턴스가 너무 많아져 브라우저가 느려지다가 결국 멈춤
+              </p>
+              <p>
+                - 충돌 후, 생성되는 슈퍼샷의 수를 감소시켜고 적의 속도를
+                증가해서 해결했습니다.{" "}
               </p>
             </li>
           </ul>
