@@ -1,10 +1,10 @@
-import Information from "@/Components/Information";
-import JsShootingGame from "@/Components/JsShootingGame";
-import MovieSelector from "@/Components/MovieSelector";
-import ReactTypescriptMovie from "@/Components/ReactTypescriptMovie";
-import SSI from "@/Components/SimpleSupportInvest";
-import Skills from "@/Components/Skills";
-import UH from "@/Components/UH";
+import Information from "@/components/Information";
+import JsShootingGame from "@/components/JsShootingGame";
+import MovieSelector from "@/components/MovieSelector";
+import ReactTypescriptMovie from "@/components/ReactTypescriptMovie";
+import SSI from "@/components/SimpleSupportInvest";
+import Skills from "@/components/Skills";
+import UH from "@/components/UH";
 export default function Home() {
   return (
     <main>
