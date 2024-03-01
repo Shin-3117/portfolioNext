@@ -5,6 +5,7 @@ import TroubleshootIcon from "@mui/icons-material/Troubleshoot";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import HTML from "../img/skills/HTML.svg";
 import JavaScript from "../img/skills/JavaScript.svg";
+import TypeScript from "../img/skills/TypeScript.svg";
 import Vue from "../img/skills/Vue.svg";
 import CSS from "../img/skills/CSS.svg";
 import TailwindCSS from "../img/skills/TailwindCSS-Dark.svg";
@@ -38,6 +39,9 @@ export default function SSI() {
             </li>
             <li>
               <Image src={JavaScript} width={50} height={50} alt="JavaScript" />
+            </li>
+            <li>
+              <Image src={TypeScript} width={50} height={50} alt="TypeScript" />
             </li>
             <li>
               <Image src={Vue} width={50} height={50} alt="Vue" />
