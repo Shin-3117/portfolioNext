@@ -20,112 +20,112 @@ export default function Skills() {
       <li>
         <Image
           src={HTML}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="HTML"
         />
       </li>
       <li>
         <Image
           src={JavaScript}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="JavaScript"
         />
       </li>
       <li>
         <Image
           src={TypeScript}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="TypeScript"
         />
       </li>
       <li>
         <Image
           src={ReactSvg}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="React"
         />
       </li>
       <li>
         <Image
           src={Vue}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="Vue"
         />
       </li>
       <li>
         <Image
           src={CSS}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="CSS"
         />
       </li>
       <li>
         <Image
           src={Sass}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="Sass"
         />
       </li>
       <li>
         <Image
           src={TailwindCSS}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="TailwindCSS"
         />
       </li>
       <li>
         <Image
           src={Bootstrap}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="Bootstrap"
         />
       </li>
       {/* <li>
           <Image
             src={Python}
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             alt="Python"
           />
         </li>
         <li>
           <Image
             src={Django}
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             alt="Django"
           />
         </li>
         <li>
           <Image
             src={SQLite}
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             alt="SQLite"
           />
         </li> */}
       <li>
         <Image
           src={Git}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="Git"
         />
       </li>
       <li>
         <Image
           src={Figma}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="Figma"
         />
       </li>

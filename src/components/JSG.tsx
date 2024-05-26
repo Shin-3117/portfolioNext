@@ -707,7 +707,7 @@ const JSG: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center h-screen">
+    <section className="relative flex flex-col items-center justify-center h-screen bg-black">
       <canvas ref={canvasRef}></canvas>
       <div className="absolute top-0 left-0 text-white">
         <div className="text-7xl select-none flex">

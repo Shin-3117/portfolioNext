@@ -10,9 +10,8 @@ import * as d3 from "d3";
 
 export interface Repository {
   name: string;
-  createdAt: string;
-  pushedAt: string;
-  updatedAt: string;
+  start: string;
+  end: string;
 }
 
 export default function HistoryChart() {
@@ -20,10 +19,29 @@ export default function HistoryChart() {
     Repository[]
   >([
     {
+      name: "삼성 청년 SW아카데미",
+      start: "2023-07-05",
+      end: "2024-06-28",
+    },
+    {
+      name: "ABC-Lab 웹프론트엔드",
+      start: "2023-01-11",
+      end: "2023-04-28",
+    },
+    {
+      name: "군대",
+      start: "2017-03-28",
+      end: "2018-12-20",
+    },
+    {
       name: "부산대학교",
-      createdAt: "2016-03",
-      pushedAt: "2022-02",
-      updatedAt: "2022-02",
+      start: "2016-03-02",
+      end: "2022-02-25",
+    },
+    {
+      name: "밀성고등학교",
+      start: "2013-03-04",
+      end: "2016-02-04",
     },
   ]);
   const svgRef =
@@ -46,10 +64,11 @@ export default function HistoryChart() {
     );
     const margin = {
       top: 20,
-      right: 24,
+      right: 20,
       bottom: 20,
-      left: 24,
+      left: 0,
     };
+    const barHeight = 24;
     const svgWidth =
       svgRef.current.getBoundingClientRect()
         .width;
@@ -58,7 +77,7 @@ export default function HistoryChart() {
       margin.left -
       margin.right;
     const height =
-      repos.length * 12 +
+      repos.length * barHeight +
       margin.top +
       margin.bottom;
     svg
@@ -70,20 +89,15 @@ export default function HistoryChart() {
     //x축 범위 지정
     const dates = repos.flatMap((d) => [
       new Date(
-        new Date(
-          d.createdAt
-        ).getFullYear(),
-        new Date(d.createdAt).getMonth()
+        new Date(d.start).getFullYear(),
+        new Date(d.start).getMonth()
       ),
       new Date(
-        new Date(
-          d.updatedAt
-        ).getFullYear(),
-        new Date(
-          d.updatedAt
-        ).getMonth() + 1
+        new Date(d.end).getFullYear(),
+        new Date(d.end).getMonth() + 1
       ),
     ]);
+
     const x = d3
       .scaleTime()
       .domain(
@@ -93,8 +107,9 @@ export default function HistoryChart() {
     //x축 틱 양식 지정
     const xAxis = d3
       .axisTop(x)
+      // .ticks(d3.timeYear.every(1));
       .tickFormat((date) =>
-        d3.timeFormat("%Y-%m")(
+        d3.timeFormat("%Y")(
           date as Date
         )
       );
@@ -131,19 +146,16 @@ export default function HistoryChart() {
           // 호버 시 테두리 추가
           d3.select(this)
             .select("rect")
-            .attr("stroke", "blue")
+            .attr("stroke", "white")
             .attr("stroke-width", 1);
 
           // 툴팁 내용 설정
           const tooltipContent = `<strong>${
             d.name
-          }</strong><br/>Created: ${d.createdAt.substring(
+          }</strong><br/>${d.start.substring(
             0,
             10
-          )}<br/>pushed: ${d.pushedAt.substring(
-            0,
-            10
-          )}`;
+          )}~${d.end.substring(0, 10)}`;
 
           // tooltip을 보이도록 설정하고 내용을 채움
           tooltip
@@ -151,9 +163,20 @@ export default function HistoryChart() {
               "visibility",
               "visible"
             )
+            .style(
+              "background-color",
+              "rgba(255, 255, 255, 0.8)"
+            )
+            // .style("padding", "4px")
             .html(tooltipContent)
-            .style("left", 24 + "px")
-            .style("top", 24 + "px");
+            .style(
+              "left",
+              margin.left + "px"
+            )
+            .style(
+              "top",
+              margin.top + "px"
+            );
         }
       )
       .on("mouseout", function () {
@@ -176,33 +199,23 @@ export default function HistoryChart() {
           .append("rect")
           .attr("x", () => {
             if (
-              x(new Date(d.createdAt)) >
-              x(new Date(d.pushedAt))
+              x(new Date(d.start)) >
+              x(new Date(d.end))
             ) {
-              return x(
-                new Date(d.pushedAt)
-              );
+              return x(new Date(d.end));
             }
-            return x(
-              new Date(d.createdAt)
-            );
+            return x(new Date(d.start));
           })
-          .attr("y", i * 12)
+          .attr("y", i * barHeight)
           .attr(
             "width",
             () =>
               Math.abs(
-                x(
-                  new Date(d.pushedAt)
-                ) -
-                  x(
-                    new Date(
-                      d.createdAt
-                    )
-                  )
+                x(new Date(d.end)) -
+                  x(new Date(d.start))
               ) + 1
           )
-          .attr("height", 12)
+          .attr("height", barHeight)
           .attr(
             "fill",
             colorScale(i.toString())
@@ -211,16 +224,19 @@ export default function HistoryChart() {
         group
           .append("text")
           .attr("x", () =>
-            x(new Date(d.createdAt))
+            x(new Date(d.start))
           )
-          .attr("y", i * 12 + 10)
-          .attr("font-size", "12px")
-          .attr("fill", "black")
+          .attr(
+            "y",
+            i * barHeight + margin.top
+          )
+          .attr("font-size", "20px")
+          // .attr("fill", "white")
           .text(() => `${d.name}`)
           .attr("text-anchor", () => {
             // 텍스트의 x 좌표가 SVG 요소의 가운데보다 큰지 여부 확인
             return x(
-              new Date(d.createdAt)
+              new Date(d.start)
             ) >
               svgWidth / 4
               ? "end"
@@ -234,13 +250,22 @@ export default function HistoryChart() {
   return (
     <div className="relative">
       <svg
-        className="w-full"
+        className="w-full "
         ref={svgRef}
       />
-      <div
-        className="bg-white p-4 rounded-2xl border"
-        ref={tooltipRef}
-      ></div>
+      <div ref={tooltipRef}></div>
+      <ul className="flex flex-col gap-2">
+        {repos.map((repo, index) => (
+          <li
+            key={index}
+            className="text-xl"
+          >
+            {repo.start}~{repo.end}
+            {" : "}
+            {repo.name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
