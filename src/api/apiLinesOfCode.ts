@@ -137,7 +137,7 @@ export async function getTotalLinesOfCode(
       repo.languages = sortedLanguages;
     });
 
-    console.log(repositories);
+    // console.log(repositories);
     return repositories;
   } catch (error) {
     console.error(
