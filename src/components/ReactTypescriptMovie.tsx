@@ -1,14 +1,14 @@
 import Image from "next/image";
-import projectImg from "../img/projects/TRM.png";
+import projectImg from "@/img/projects/TRM.png";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import TroubleshootIcon from "@mui/icons-material/Troubleshoot";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import HTML from "../img/skills/HTML.svg";
-import JavaScript from "../img/skills/JavaScript.svg";
-import TypeScript from "../img/skills/TypeScript.svg";
-import ReactSvg from "../img/skills/React.svg";
-import CSS from "../img/skills/CSS.svg";
-import Sass from "../img/skills/Sass.svg";
+import HTML from "@/img/skills/HTML.svg";
+import JavaScript from "@/img/skills/JavaScript.svg";
+import TypeScript from "@/img/skills/TypeScript.svg";
+import ReactSvg from "@/img/skills/React.svg";
+import CSS from "@/img/skills/CSS.svg";
+import Sass from "@/img/skills/Sass.svg";
 export default function ReactTypescriptMovie() {
   return (
     <article className="p-4 m-4 bg-stone-50 rounded-2xl w-[90vw] max-w-[1200px]">
@@ -28,26 +28,63 @@ export default function ReactTypescriptMovie() {
           </a>
         </div>
         <div className="center flex-col">
-          <Image src={projectImg} width={600} alt="프로젝트 전체화면" />
-          <p>Typescrip, React로 만든 영화 사이트 입니다.</p>
+          <Image
+            src={projectImg}
+            width={600}
+            alt="프로젝트 전체화면"
+          />
+          <p>
+            Typescrip, React로 만든 영화
+            사이트 입니다.
+          </p>
           <ul className="flex gap-2 p-2">
             <li>
-              <Image src={HTML} width={50} height={50} alt="HTML" />
+              <Image
+                src={HTML}
+                width={50}
+                height={50}
+                alt="HTML"
+              />
             </li>
             <li>
-              <Image src={JavaScript} width={50} height={50} alt="JavaScript" />
+              <Image
+                src={JavaScript}
+                width={50}
+                height={50}
+                alt="JavaScript"
+              />
             </li>
             <li>
-              <Image src={TypeScript} width={50} height={50} alt="TypeScript" />
+              <Image
+                src={TypeScript}
+                width={50}
+                height={50}
+                alt="TypeScript"
+              />
             </li>
             <li>
-              <Image src={ReactSvg} width={50} height={50} alt="React" />
+              <Image
+                src={ReactSvg}
+                width={50}
+                height={50}
+                alt="React"
+              />
             </li>
             <li>
-              <Image src={CSS} width={50} height={50} alt="CSS" />
+              <Image
+                src={CSS}
+                width={50}
+                height={50}
+                alt="CSS"
+              />
             </li>
             <li>
-              <Image src={Sass} width={50} height={50} alt="Sass" />
+              <Image
+                src={Sass}
+                width={50}
+                height={50}
+                alt="Sass"
+              />
             </li>
           </ul>
         </div>
@@ -60,35 +97,59 @@ export default function ReactTypescriptMovie() {
           </h4>
           <ul className="mb-2">
             <li className="pb-1">
-              <h5>TypeScript 사용법 숙지</h5>
-              <p>- TypeScript를 통해 사전에 error를 방지 할 수 있었습니다.</p>
+              <h5>
+                TypeScript 사용법 숙지
+              </h5>
               <p>
-                - interface를 정의하여 axios의 response의 data 타입을 정의할 수
+                - TypeScript를 통해
+                사전에 error를 방지 할
+                수 있었습니다.
+              </p>
+              <p>
+                - interface를 정의하여
+                axios의 response의 data
+                타입을 정의할 수
                 있었습니다.
               </p>
             </li>
             <li>
-              <h5>마우스 hover시 CSS 적용 및 버튼 클릭으로 상세 페이지 출력</h5>
+              <h5>
+                마우스 hover시 CSS 적용
+                및 버튼 클릭으로 상세
+                페이지 출력
+              </h5>
               <p>
-                - 영화포스터 단위로 컴포넌트를 분리하여 작업을 진행했습니다.
+                - 영화포스터 단위로
+                컴포넌트를 분리하여
+                작업을 진행했습니다.
               </p>
               <p>
-                - 마우스 hover시, 영화 포스터 위에 영화 제목, 평점, 더보기
-                버튼을 출력하게 구현했습니다.
+                - 마우스 hover시, 영화
+                포스터 위에 영화 제목,
+                평점, 더보기 버튼을
+                출력하게 구현했습니다.
               </p>
               <p>
-                - 출력된 모달은 모달창 내용 컨테이너 밖을 클릭하면 닫히도록
+                - 출력된 모달은 모달창
+                내용 컨테이너 밖을
+                클릭하면 닫히도록
                 구현했습니다.
               </p>
             </li>
             <li>
               <h5>스크롤바 CSS 적용</h5>
               <p>
-                - <code>::-webkit-scrollbar</code>를 이용해 스크롤바를
+                -{" "}
+                <code>
+                  ::-webkit-scrollbar
+                </code>
+                를 이용해 스크롤바를
                 커스텀했습니다.
               </p>
               <p>
-                - Sass에서 색상을 사정에 정의하여 관리의 편의성을 높였습니다.
+                - Sass에서 색상을 사정에
+                정의하여 관리의 편의성을
+                높였습니다.
               </p>
             </li>
           </ul>
@@ -100,21 +161,33 @@ export default function ReactTypescriptMovie() {
           </h4>
           <ul className="mb-2">
             <li className="pb-1">
-              <h5>영화 데이터 API 사이트의 API Key오류</h5>
+              <h5>
+                영화 데이터 API 사이트의
+                API Key오류
+              </h5>
               <p>
-                - Access Token Auth와 API Key Auth 두 가지 종류가 있었고 종류를
+                - Access Token Auth와
+                API Key Auth 두 가지
+                종류가 있었고 종류를
                 변경하여 해결하였습니다.
               </p>
             </li>
             <li className="pb-1">
-              <h5>모달창 내용 컨테이너를 클릭해도 모달이 닫히는 버그</h5>
+              <h5>
+                모달창 내용 컨테이너를
+                클릭해도 모달이 닫히는
+                버그
+              </h5>
               <p>
-                - 확인 결과 버블링으로 인해 상위 태그의 모달찰을 닫는 함수가
+                - 확인 결과 버블링으로
+                인해 상위 태그의
+                모달찰을 닫는 함수가
                 실행됨
               </p>
               <p>
-                - <code>{`onClick={(e) => e.stopPropagation()}>`}</code>를 통해
-                버블링 방지
+                -{" "}
+                <code>{`onClick={(e) => e.stopPropagation()}>`}</code>
+                를 통해 버블링 방지
               </p>
             </li>
           </ul>
