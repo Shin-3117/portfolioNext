@@ -261,7 +261,7 @@ const JSG: React.FC = () => {
         x,
         y,
         20,
-        "#ffffff"
+        "green"
       );
       bullets = [];
       enemies = [];
@@ -358,7 +358,7 @@ const JSG: React.FC = () => {
       const c = canvas.getContext("2d");
       if (c) {
         c.fillStyle =
-          "rgba(0, 0, 0, 0.1)";
+          "rgba(255, 255, 255, 0.1)";
         c.fillRect(
           0,
           0,
@@ -638,7 +638,7 @@ const JSG: React.FC = () => {
               canvas.width / 2,
               canvas.height / 2,
               5,
-              "white",
+              "green",
               velocity
             )
           );
@@ -652,7 +652,7 @@ const JSG: React.FC = () => {
               canvas.width / 2,
               canvas.height / 2,
               25,
-              "white",
+              "red",
               velocity
             )
           );
@@ -709,7 +709,7 @@ const JSG: React.FC = () => {
   return (
     <section className="relative flex flex-col items-center justify-center h-screen bg-black">
       <canvas ref={canvasRef}></canvas>
-      <div className="absolute top-5 left-5 text-white">
+      <div className="absolute top-5 left-5 ">
         <div className="text-7xl select-none flex">
           <p className="pr-2">SCORE:</p>
           <div
@@ -725,7 +725,7 @@ const JSG: React.FC = () => {
       </div>
       <div className="absolute ">
         <div
-          className="flex flex-col text-white text-7xl"
+          className="flex flex-col  text-7xl"
           id="scoreBoard"
           ref={modalRef}
           style={{ display: "none" }}
@@ -749,7 +749,7 @@ const JSG: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="absolute text-white bottom-5 left-5 select-none">
+      <div className="absolute  bottom-5 left-5 select-none">
         <p className="text-9xl">
           FE DEVELOPER
         </p>
