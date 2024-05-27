@@ -1,5 +1,6 @@
 import Image from "next/image";
-import projectImg from "@/img/projects/SSI.png";
+import projectImg from "@/img/projects/SSI/SSI.png";
+import componentDiagram from "@/img/projects/SSI/컴포넌트구조도.svg";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import TroubleshootIcon from "@mui/icons-material/Troubleshoot";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -14,7 +15,7 @@ import Django from "@/img/skills/Django.svg";
 import SQLite from "@/img/skills/SQLite.svg";
 export default function SSI() {
   return (
-    <article className="p-4 m-4 bg-stone-50 rounded-2xl w-[90vw] max-w-[1200px]">
+    <article className="p-4 m-4 border rounded-2xl ">
       <section>
         <div className="relative mb-4">
           <h3 className="text-center text-2xl font-bold">
@@ -30,91 +31,98 @@ export default function SSI() {
             <GitHubIcon />
           </a>
         </div>
-        <div className="center flex-col">
+        <div className="center flex-col lg:flex-row gap-2">
+          <div className="center flex-col">
+            <Image
+              src={projectImg}
+              height={400}
+              alt="프로젝트 전체화면"
+            />
+            <p>
+              투자를 위한 종합 정보 제공
+              사이트입니다. 2인
+              팀프로젝트입니다.
+            </p>
+            <ul className="flex gap-2 p-2">
+              <li>
+                <Image
+                  src={HTML}
+                  width={50}
+                  height={50}
+                  alt="HTML"
+                />
+              </li>
+              <li>
+                <Image
+                  src={JavaScript}
+                  width={50}
+                  height={50}
+                  alt="JavaScript"
+                />
+              </li>
+              <li>
+                <Image
+                  src={TypeScript}
+                  width={50}
+                  height={50}
+                  alt="TypeScript"
+                />
+              </li>
+              <li>
+                <Image
+                  src={Vue}
+                  width={50}
+                  height={50}
+                  alt="Vue"
+                />
+              </li>
+              <li>
+                <Image
+                  src={CSS}
+                  width={50}
+                  height={50}
+                  alt="CSS"
+                />
+              </li>
+              <li>
+                <Image
+                  src={TailwindCSS}
+                  width={50}
+                  height={50}
+                  alt="TailwindCSS"
+                />
+              </li>
+              <li>
+                <Image
+                  src={Python}
+                  width={50}
+                  height={50}
+                  alt="Python"
+                />
+              </li>
+              <li>
+                <Image
+                  src={Django}
+                  width={50}
+                  height={50}
+                  alt="Django"
+                />
+              </li>
+              <li>
+                <Image
+                  src={SQLite}
+                  width={50}
+                  height={50}
+                  alt="SQLite"
+                />
+              </li>
+            </ul>
+          </div>
           <Image
-            src={projectImg}
-            width={600}
-            alt="프로젝트 전체화면"
+            src={componentDiagram}
+            height={600}
+            alt="프로젝트 컴포넌트 구조도"
           />
-          <p>
-            투자를 위한 종합 정보 제공
-            사이트입니다. 2인
-            팀프로젝트입니다.
-          </p>
-          <ul className="flex gap-2 p-2">
-            <li>
-              <Image
-                src={HTML}
-                width={50}
-                height={50}
-                alt="HTML"
-              />
-            </li>
-            <li>
-              <Image
-                src={JavaScript}
-                width={50}
-                height={50}
-                alt="JavaScript"
-              />
-            </li>
-            <li>
-              <Image
-                src={TypeScript}
-                width={50}
-                height={50}
-                alt="TypeScript"
-              />
-            </li>
-            <li>
-              <Image
-                src={Vue}
-                width={50}
-                height={50}
-                alt="Vue"
-              />
-            </li>
-            <li>
-              <Image
-                src={CSS}
-                width={50}
-                height={50}
-                alt="CSS"
-              />
-            </li>
-            <li>
-              <Image
-                src={TailwindCSS}
-                width={50}
-                height={50}
-                alt="TailwindCSS"
-              />
-            </li>
-            <li>
-              <Image
-                src={Python}
-                width={50}
-                height={50}
-                alt="Python"
-              />
-            </li>
-            <li>
-              <Image
-                src={Django}
-                width={50}
-                height={50}
-                alt="Django"
-              />
-            </li>
-            <li>
-              <Image
-                src={SQLite}
-                width={50}
-                height={50}
-                alt="SQLite"
-              />
-            </li>
-          </ul>
         </div>
       </section>
       <section className="p-4">
@@ -123,8 +131,8 @@ export default function SSI() {
             <LightbulbIcon />
             Learning Point
           </h4>
-          <ul className="mb-2">
-            <li className="pb-1">
+          <ul className="flex flex-col gap-2">
+            <li className="flex flex-col gap-2">
               <h5>Vue3 사용법 숙지</h5>
               <p>
                 - react는 jsx문법으로
@@ -203,7 +211,7 @@ export default function SSI() {
             Trouble Shooting
           </h4>
           <ul className="mb-2">
-            <li className="pb-1">
+            <li className="flex flex-col gap-2">
               <h5>
                 서버 캐싱으로 인한 서버
                 데이터 최신화 불가능

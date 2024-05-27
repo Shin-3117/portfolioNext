@@ -13,7 +13,7 @@ export default function RunBarCard() {
   }, [setRepos]);
 
   return (
-    <section>
+    <section className="h-[484px]">
       <p className="text-3xl">
         Lines Of Code
       </p>

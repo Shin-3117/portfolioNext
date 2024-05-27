@@ -39,7 +39,7 @@ export default function Information() {
   return (
     <article className="rounded-2xl overflow-hidden animate-fade-right animate-delay-500">
       <div className="sm:flex ">
-        <div className="bg-stone-100  p-5 center">
+        <div className="border  p-5 center">
           <Image
             src={ID_Photo}
             alt="증명사진"
@@ -50,7 +50,7 @@ export default function Information() {
         </div>
         <div className="text-lg grow">
           <ul
-            className="bg-stone-100 leading-relaxed
+            className="border leading-relaxed
             p-5 flex flex-col justify-center h-full md:rounded-tr-2xl"
           >
             <li className="hover:bg-stone-300">

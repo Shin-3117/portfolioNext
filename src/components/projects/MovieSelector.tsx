@@ -14,7 +14,7 @@ import Sass from "@/img/skills/Sass.svg";
 
 export default function MovieSelector() {
   return (
-    <article className="p-4 m-4 bg-stone-100 rounded-2xl w-[90vw] max-w-[1200px]">
+    <article className="p-4 m-4 border rounded-2xl">
       <section>
         <div className="relative mb-4">
           <h3 className="text-center text-2xl font-bold">
@@ -86,7 +86,7 @@ export default function MovieSelector() {
           </ul>
         </div>
       </section>
-      <section className="center flex-col p-4">
+      <section className="flex-col p-4">
         <div>
           <section>
             <h4>
@@ -94,7 +94,7 @@ export default function MovieSelector() {
               Learning Point
             </h4>
             <ul className="mb-2">
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>Layout 제작</h5>
                 <div className="lg:flex">
                   <Image
@@ -102,7 +102,7 @@ export default function MovieSelector() {
                     width={500}
                     alt="Project Layout"
                   />
-                  <div>
+                  <div className="flex flex-col gap-2">
                     <p>
                       - Create React
                       App으로 프로젝트
@@ -134,7 +134,7 @@ export default function MovieSelector() {
                 </div>
               </li>
 
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>인증 기능 구현</h5>
                 <div className="lg:flex">
                   <Image
@@ -142,7 +142,7 @@ export default function MovieSelector() {
                     width={500}
                     alt="Project Layout"
                   />
-                  <div>
+                  <div className="flex flex-col gap-2">
                     <p>
                       - 로그인,
                       회원가입, 관리자
@@ -182,7 +182,7 @@ export default function MovieSelector() {
                 </div>
               </li>
 
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>
                   백오피스 페이지 제작
                 </h5>
@@ -194,7 +194,7 @@ export default function MovieSelector() {
                     width={500}
                     alt="Project Layout"
                   />
-                  <div>
+                  <div className="flex flex-col gap-2">
                     <p>
                       - 사이트에 등록된
                       영화, 유저, 댓글
@@ -237,7 +237,7 @@ export default function MovieSelector() {
               Trouble Shooting
             </h4>
             <ul className="mb-2">
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>
                   BackOffice Table
                 </h5>

@@ -4,7 +4,7 @@ import RunBarCard from "./_runbarchart/RunBarCard";
 
 export default function Info() {
   return (
-    <section className="p-5 flex flex-col lg:flex-row gap-5 lg:justify-around h-screen">
+    <section className="p-5 flex flex-col lg:flex-row gap-5 lg:justify-around">
       <MyInfo />
       <div className="flex flex-col gap-4">
         <p className="text-6xl">

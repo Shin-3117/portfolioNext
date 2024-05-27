@@ -672,12 +672,23 @@ const JSG: React.FC = () => {
             "none";
       };
 
-    if (canvasRef.current) {
-      canvasRef.current.width =
-        window.innerWidth;
-      canvasRef.current.height =
-        window.innerHeight;
-    }
+    // if (canvasRef.current) {
+    //   canvasRef.current.width =
+    //     window.innerWidth;
+    //   canvasRef.current.height =
+    //     window.innerHeight;
+    // }
+    const handleResize = () => {
+      if (canvasRef.current) {
+        canvasRef.current.width =
+          window.innerWidth;
+        canvasRef.current.height =
+          window.innerHeight;
+      }
+    };
+
+    // 초기 크기 설정
+    handleResize();
 
     window.addEventListener(
       "click",
@@ -703,11 +714,18 @@ const JSG: React.FC = () => {
           handleStartButtonClick
         );
       }
+      window.removeEventListener(
+        "resize",
+        handleResize
+      );
     };
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center h-screen bg-black">
+    <section
+      id="landing"
+      className="relative flex flex-col items-center justify-center h-screen bg-black"
+    >
       <canvas ref={canvasRef}></canvas>
       <div className="absolute top-5 left-5 ">
         <div className="text-7xl select-none flex">

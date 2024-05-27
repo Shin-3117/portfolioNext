@@ -1,5 +1,6 @@
 import Image from "next/image";
 import projectImg from "@/img/projects/UH/StartPage.gif";
+import componentDiagram from "@/img/projects/UH/컴포넌트구조도.png";
 import waitingRoomImg from "@/img/projects/UH/대기방.gif";
 import game101Img0 from "@/img/projects/UH/고요속의외침_설명.gif";
 import game101Img1 from "@/img/projects/UH/아이템_STT.gif";
@@ -13,9 +14,11 @@ import JavaScript from "@/img/skills/JavaScript.svg";
 import ReactSvg from "@/img/skills/React.svg";
 import CSS from "@/img/skills/CSS.svg";
 import TailwindCSS from "@/img/skills/TailwindCSS-Dark.svg";
+import Jira from "@/img/skills/Jira.svg";
+
 export default function UH() {
   return (
-    <article className="p-4 m-4 bg-stone-100 rounded-2xl w-[90vw] max-w-[1200px]">
+    <article className="p-4 m-4 border rounded-2xl">
       <section>
         <div className="relative mb-4">
           <h3 className="text-center text-2xl font-bold">
@@ -31,80 +34,94 @@ export default function UH() {
             <GitHubIcon />
           </a>
         </div>
-        <div className="center flex-col">
-          <div className="flex">
-            <div className="w-1/2 max-w-[560px]">
+        <div className="flex flex-col lg:flex-row">
+          <div className="center flex-col">
+            <div className="lg:w-1/2">
               <Image
                 src={projectImg}
                 alt="UH시작화면"
               />
-            </div>
-            <div className="w-1/2 max-w-[560px]">
+
               <Image
                 src={game102Img1}
                 alt="게임:인물맞추기"
               />
             </div>
+            <p>
+              UH!?는 WebRTC를 이용한
+              온라인 예능 게임
+              플래폼입니다. 6인 팀
+              프로젝트입니다.
+            </p>
+            <ul className="flex gap-2 p-2">
+              <li>
+                <Image
+                  src={HTML}
+                  width={50}
+                  height={50}
+                  alt="HTML"
+                />
+              </li>
+              <li>
+                <Image
+                  src={JavaScript}
+                  width={50}
+                  height={50}
+                  alt="JavaScript"
+                />
+              </li>
+              <li>
+                <Image
+                  src={ReactSvg}
+                  width={50}
+                  height={50}
+                  alt="React"
+                />
+              </li>
+              <li>
+                <Image
+                  src={CSS}
+                  width={50}
+                  height={50}
+                  alt="CSS"
+                />
+              </li>
+              <li>
+                <Image
+                  src={TailwindCSS}
+                  width={50}
+                  height={50}
+                  alt="TailwindCSS"
+                />
+              </li>
+              <li>
+                <Image
+                  src={Jira}
+                  width={50}
+                  height={50}
+                  alt="Jira"
+                />
+              </li>
+            </ul>
           </div>
-          <p>
-            UH!?는 WebRTC를 이용한
-            온라인 예능 게임
-            플래폼입니다. 6인 팀
-            프로젝트입니다.
-          </p>
-          <ul className="flex gap-2 p-2">
-            <li>
-              <Image
-                src={HTML}
-                width={50}
-                height={50}
-                alt="HTML"
-              />
-            </li>
-            <li>
-              <Image
-                src={JavaScript}
-                width={50}
-                height={50}
-                alt="JavaScript"
-              />
-            </li>
-            <li>
-              <Image
-                src={ReactSvg}
-                width={50}
-                height={50}
-                alt="React"
-              />
-            </li>
-            <li>
-              <Image
-                src={CSS}
-                width={50}
-                height={50}
-                alt="CSS"
-              />
-            </li>
-            <li>
-              <Image
-                src={TailwindCSS}
-                width={50}
-                height={50}
-                alt="TailwindCSS"
-              />
-            </li>
-          </ul>
+          <div className="lg:w-1/2">
+            <Image
+              src={componentDiagram}
+              height={600}
+              alt="컴포넌트 구조도"
+            />
+          </div>
         </div>
       </section>
-      <section className="center flex-col p-4">
+      <section className=" flex-col p-4">
         <div>
           <section>
             <h4>
               <LightbulbIcon />
               Learning Point
             </h4>
-            <ul className="mb-2">
-              <li className="pb-1">
+            <ul className="flex flex-col gap-2">
+              <li className="flex flex-col gap-2">
                 <h5>
                   WebRTC 라이브러리를
                   이용한 통신 연결
@@ -117,7 +134,7 @@ export default function UH() {
                 </p>
               </li>
 
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>
                   게임 대기방 페이지
                   제작
@@ -182,7 +199,7 @@ export default function UH() {
                   가져옵니다.
                 </p>
               </li>
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>
                   게임: 고요 속의 침묵
                   제작
@@ -292,7 +309,7 @@ export default function UH() {
                   대기방으로 돌아갑니다.
                 </p>
               </li>
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>
                   게임: 인물 맞추기
                 </h5>
@@ -330,7 +347,7 @@ export default function UH() {
                   타이머가 있습니다.
                 </p>
                 <p>
-                  -- 턴 타이머는 문제를
+                  - 턴 타이머는 문제를
                   변경하며, 전체
                   타이머는 게임을
                   종료시킵니다.
@@ -348,8 +365,8 @@ export default function UH() {
               <TroubleshootIcon />
               Trouble Shooting
             </h4>
-            <ul className="mb-2">
-              <li className="pb-1">
+            <ul className="flex flex-col gap-2">
+              <li className="flex flex-col gap-2">
                 <h5>
                   OpenVidu의 예제코드와
                   사용 react버전이 다름
@@ -374,7 +391,7 @@ export default function UH() {
                   적용했습니다.
                 </p>
               </li>
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>
                   연결된 각 브라우저별로
                   문제 화면이 달라지는
@@ -393,7 +410,7 @@ export default function UH() {
                   해결했습니다.
                 </p>
               </li>
-              <li className="pb-1">
+              <li className="flex flex-col gap-2">
                 <h5>
                   연결된 각 브라우저별로
                   게임 시간이 달라지는

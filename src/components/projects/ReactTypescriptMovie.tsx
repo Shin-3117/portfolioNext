@@ -96,7 +96,7 @@ export default function ReactTypescriptMovie() {
             Learning Point
           </h4>
           <ul className="mb-2">
-            <li className="pb-1">
+            <li className="flex flex-col gap-2">
               <h5>
                 TypeScript 사용법 숙지
               </h5>
@@ -160,7 +160,7 @@ export default function ReactTypescriptMovie() {
             Trouble Shooting
           </h4>
           <ul className="mb-2">
-            <li className="pb-1">
+            <li className="flex flex-col gap-2">
               <h5>
                 영화 데이터 API 사이트의
                 API Key오류
@@ -172,7 +172,7 @@ export default function ReactTypescriptMovie() {
                 변경하여 해결하였습니다.
               </p>
             </li>
-            <li className="pb-1">
+            <li className="flex flex-col gap-2">
               <h5>
                 모달창 내용 컨테이너를
                 클릭해도 모달이 닫히는

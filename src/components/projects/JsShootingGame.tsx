@@ -8,7 +8,7 @@ import HTML from "@/img/skills/HTML.svg";
 import JavaScript from "@/img/skills/JavaScript.svg";
 export default function JsShootingGame() {
   return (
-    <article className="p-4 m-4 bg-stone-50 rounded-2xl w-[90vw] max-w-[1200px]">
+    <article className="p-4 m-4 border  rounded-2xl">
       <section>
         <div className="flex justify-between mb-4">
           <a
@@ -80,8 +80,8 @@ export default function JsShootingGame() {
             <LightbulbIcon />
             Learning Point
           </h4>
-          <ul className="mb-2">
-            <li className="pb-1">
+          <ul className="flex flex-col gap-2">
+            <li className="flex flex-col gap-2">
               <h5>
                 HTML canvas tag 와 JS
                 animate() 활용하여 게임
@@ -126,7 +126,7 @@ export default function JsShootingGame() {
                 샷을 추가로 생성합니다.
               </p>
             </li>
-            <li className="pb-1">
+            <li className="flex flex-col gap-2">
               <h5>
                 자바스크립트의 class
                 구문에 대한 활용
@@ -144,8 +144,8 @@ export default function JsShootingGame() {
             <TroubleshootIcon />
             Trouble Shooting
           </h4>
-          <ul className="mb-2">
-            <li className="pb-1">
+          <ul className="flex flex-col gap-2">
+            <li className="flex flex-col gap-2">
               <h5>
                 시간 관리를{" "}
                 <code>
@@ -195,7 +195,7 @@ export default function JsShootingGame() {
                 변경하였습니다.
               </p>
             </li>
-            <li className="pb-1">
+            <li className="flex flex-col gap-2">
               <h5>
                 슈퍼샷으로 인한 브라우저
                 멈춤
