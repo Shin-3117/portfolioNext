@@ -8,7 +8,7 @@ import UH from "@/components/UH";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-10">
+    <main className="flex flex-col">
       <JSG />
       <Info />
 

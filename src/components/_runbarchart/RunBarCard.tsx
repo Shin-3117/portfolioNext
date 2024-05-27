@@ -13,7 +13,10 @@ export default function RunBarCard() {
   }, [setRepos]);
 
   return (
-    <section className="card">
+    <section>
+      <p className="text-3xl">
+        Lines Of Code
+      </p>
       <RunBarChart />
     </section>
   );

@@ -131,7 +131,7 @@ const RunBarChart: React.FC = () => {
       left: 100,
       right: 28,
     };
-    const svgHeight = 400;
+    const svgHeight = 448;
     const width =
       svgWidth -
       margin.left -
@@ -216,6 +216,7 @@ const RunBarChart: React.FC = () => {
           "transform",
           `translate(${margin.left}, ${margin.top})`
         )
+        .style("font-size", "16px")
         .call((g) => yAxis(g as any));
       svg
         .select(".x-axis")
@@ -225,6 +226,7 @@ const RunBarChart: React.FC = () => {
           "transform",
           `translate(${margin.left}, ${margin.top})`
         )
+        .style("font-size", "16px")
         .call((g) => xAxis(g as any));
       //날짜 추가
       svg

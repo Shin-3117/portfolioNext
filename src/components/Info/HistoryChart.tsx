@@ -20,28 +20,28 @@ export default function HistoryChart() {
   >([
     {
       name: "삼성 청년 SW아카데미",
-      start: "2023-07-05",
-      end: "2024-06-28",
+      start: "2023.07.05",
+      end: "2024.06.28",
     },
     {
       name: "ABC-Lab 웹프론트엔드",
-      start: "2023-01-11",
-      end: "2023-04-28",
+      start: "2023.01.11",
+      end: "2023.04.28",
     },
     {
       name: "군대",
-      start: "2017-03-28",
-      end: "2018-12-20",
+      start: "2017.03.28",
+      end: "2018.12.20",
     },
     {
       name: "부산대학교",
-      start: "2016-03-02",
-      end: "2022-02-25",
+      start: "2016.03.02",
+      end: "2022.02.25",
     },
     {
       name: "밀성고등학교",
-      start: "2013-03-04",
-      end: "2016-02-04",
+      start: "2013.03.04",
+      end: "2016.02.04",
     },
   ]);
   const svgRef =
@@ -64,8 +64,8 @@ export default function HistoryChart() {
     );
     const margin = {
       top: 20,
-      right: 20,
-      bottom: 20,
+      right: 4,
+      bottom: 4,
       left: 0,
     };
     const barHeight = 24;
@@ -230,7 +230,7 @@ export default function HistoryChart() {
             "y",
             i * barHeight + margin.top
           )
-          .attr("font-size", "20px")
+          .attr("font-size", "16px")
           // .attr("fill", "white")
           .text(() => `${d.name}`)
           .attr("text-anchor", () => {
@@ -254,15 +254,16 @@ export default function HistoryChart() {
         ref={svgRef}
       />
       <div ref={tooltipRef}></div>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-1">
         {repos.map((repo, index) => (
           <li
             key={index}
-            className="text-xl"
+            className="text flex gap-3"
           >
-            {repo.start}~{repo.end}
-            {" : "}
-            {repo.name}
+            {repo.start} ~ {repo.end}
+            <p className="font-semibold">
+              {repo.name}
+            </p>
           </li>
         ))}
       </ul>
