@@ -3,6 +3,7 @@ import HTML from "@/img/skills/HTML.svg";
 import JavaScript from "@/img/skills/JavaScript.svg";
 import TypeScript from "@/img/skills/TypeScript.svg";
 import ReactSvg from "@/img/skills/React.svg";
+import Next from "@/img/skills/Next.svg";
 import Vue from "@/img/skills/Vue.svg";
 import CSS from "@/img/skills/CSS.svg";
 import Sass from "@/img/skills/Sass.svg";
@@ -12,6 +13,7 @@ import Python from "@/img/skills/Python-Dark.svg";
 import Django from "@/img/skills/Django.svg";
 import SQLite from "@/img/skills/SQLite.svg";
 import Git from "@/img/skills/Git.svg";
+import Jira from "@/img/skills/Jira.svg";
 import Figma from "@/img/skills/Figma.svg";
 
 export default function Skills() {
@@ -47,6 +49,14 @@ export default function Skills() {
           width={60}
           height={60}
           alt="React"
+        />
+      </li>
+      <li>
+        <Image
+          src={Next}
+          width={60}
+          height={60}
+          alt="Next"
         />
       </li>
       <li>
@@ -119,6 +129,14 @@ export default function Skills() {
           width={60}
           height={60}
           alt="Git"
+        />
+      </li>
+      <li>
+        <Image
+          src={Jira}
+          width={60}
+          height={60}
+          alt="Jira"
         />
       </li>
       <li>
