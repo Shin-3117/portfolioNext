@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 스크롤을 완전히 제거합니다 */
+  width: 100%;
+}
+
 .center {
   display: flex;
   justify-content: center;
