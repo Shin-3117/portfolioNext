@@ -136,8 +136,8 @@ const JSG: React.FC = () => {
       c: CanvasRenderingContext2D
     ) {
       this.draw(c);
-      this.x += this.velocity.x * 2;
-      this.y += this.velocity.y * 2;
+      this.x += this.velocity.x * 1.1;
+      this.y += this.velocity.y * 1.1;
     }
   }
 
@@ -709,7 +709,7 @@ const JSG: React.FC = () => {
   return (
     <section className="relative flex flex-col items-center justify-center h-screen bg-black">
       <canvas ref={canvasRef}></canvas>
-      <div className="absolute top-0 left-0 text-white">
+      <div className="absolute top-5 left-5 text-white">
         <div className="text-7xl select-none flex">
           <p className="pr-2">SCORE:</p>
           <div
@@ -749,7 +749,7 @@ const JSG: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="absolute text-white bottom-0 left-0 select-none">
+      <div className="absolute text-white bottom-5 left-5 select-none">
         <p className="text-9xl">
           FE DEVELOPER
         </p>
