@@ -5,6 +5,7 @@ import TypeScript from "@/img/skills/TypeScript.svg";
 import ReactSvg from "@/img/skills/React.svg";
 import Next from "@/img/skills/Next.svg";
 import Vue from "@/img/skills/Vue.svg";
+import D3 from "@/img/skills/D3.svg";
 import CSS from "@/img/skills/CSS.svg";
 import Sass from "@/img/skills/Sass.svg";
 import TailwindCSS from "@/img/skills/TailwindCSS-Dark.svg";
@@ -65,6 +66,14 @@ export default function Skills() {
           width={60}
           height={60}
           alt="Vue"
+        />
+      </li>
+      <li>
+        <Image
+          src={D3}
+          width={60}
+          height={60}
+          alt="D3"
         />
       </li>
       <li>

@@ -126,7 +126,7 @@ const RunBarChart: React.FC = () => {
         .width;
     const duration = 1000;
     const margin = {
-      top: 20,
+      top: 24,
       bottom: 20,
       left: 100,
       right: 28,
