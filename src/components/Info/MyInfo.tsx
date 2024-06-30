@@ -38,7 +38,7 @@ export default function MyInfo() {
         </h3>
         <ul className="flex flex-col gap-1 pt-1">
           <li>
-            2024.05.20 삼성 청년
+            2024.05.24 삼성 청년
             SW아카데미 자율프로젝트
             우수상
           </li>
