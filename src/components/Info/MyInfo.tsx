@@ -26,7 +26,7 @@ export default function MyInfo() {
           </p>
         </li>
       </ul>
-      <div>
+      <div className='w-full'>
         <h3 className="text-3xl">
           EDUCATION
         </h3>
